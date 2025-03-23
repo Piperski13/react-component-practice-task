@@ -1,15 +1,15 @@
 import "../App.js";
 import ConceptHeader from "./ConceptHeader.js";
+import ConceptBody from "./ConceptBody.js";
+
 const ConceptCard = (props) => {
   return (
     <div>
       <ConceptHeader keyConceptsImage={props.keyConceptsImage}></ConceptHeader>
       <ul id="concepts">
-        <li className="concept">
-          <img src={props.concepts[0].image} alt={props.concepts[0].title} />
-          <h2>{props.concepts[0].title}</h2>
-          <p>{props.concepts[0].description}</p>
-        </li>
+        <ConceptBody concepts={props.concepts[0]}></ConceptBody>
+        <ConceptBody concepts={props.concepts[1]}></ConceptBody>
+        <ConceptBody concepts={props.concepts[2]}></ConceptBody>
       </ul>
     </div>
   );
